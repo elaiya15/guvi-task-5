@@ -1,0 +1,143 @@
+QUESTION:1
+
+For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+1.for loop
+
+let json = [{
+    "id" : "1", 
+    "msg"   : "hi",
+    "tid" : "2013-05-05 23:35",
+    "fromWho": "hello1@email.se"
+},
+{
+    "id" : "2", 
+    "msg"   : "there",
+    "tid" : "2013-05-05 23:45",
+    "fromWho": "hello2@email.se"
+}];
+for(let i = 0; i < json.length; i++) {
+    let obj = json[i];
+
+    console.log(obj.msg);
+}
+
+2.for in loop
+
+let json = [{
+    "id" : "1", 
+    "msg"   : "hi",
+    "tid" : "2013-05-05 23:35",
+    "fromWho": "hello1@email.se"
+},
+{
+    "id" : "2", 
+    "msg"   : "there",
+    "tid" : "2013-05-05 23:45",
+    "fromWho": "hello2@email.se"
+}];
+for (var key in json) {
+if (json.hasOwnProperty(key)) {
+  console.log(json[key].id);
+  console.log(json[key].msg);
+}
+}
+
+
+3.forEach loop
+
+
+var json = [{
+    "id" : "1", 
+    "msg"   : "hi",
+    "tid" : "2013-05-05 23:35",
+    "fromWho": "hello1@email.se"
+},
+{
+    "id" : "2", 
+    "msg"   : "there",
+    "tid" : "2013-05-05 23:45",
+    "fromWho": "hello2@email.se"
+}];
+
+json.forEach((item) => {
+  console.log('ID: ' + item.id);
+  console.log('MSG: ' + item.msg);
+  console.log('TID: ' + item.tid);
+  console.log('FROMWHO: ' + item.fromWho);
+});
+
+4. for of
+let json = [{
+    "id" : "1", 
+    "msg"   : "hi",
+    "tid" : "2013-05-05 23:35",
+    "fromWho": "hello1@email.se"
+},
+{
+    "id" : "2", 
+    "msg"   : "there",
+    "tid" : "2013-05-05 23:45",
+    "fromWho": "hello2@email.se"
+}];
+ for(const a of json){
+   console.log(a)}
+
+
+
+
+QUESTION:2
+
+
+let myResume={
+    "basics": {
+      "name": "ELAIYA PERUMAL V",
+      "email": "elaiyavenkat@gamil.com",
+      "phone": 9943751226,
+      "degree": "B.E",
+      "location": {
+        "address": "05/52 school street , valayamadevi(po)",
+        "postalCode": 636121,
+        "city": "Salem",
+        "state": "Tamilnadu",
+        "country": "India"
+      },
+      "profiles": [
+        {
+          "website": "https://www.linkedin.com/in/elaiya",
+          "github":"https://github.com/elaiya15"
+        }
+      ]
+    },
+    "education": [
+      {
+        "institution": "karpagam clg",
+        "department": "Mechatronics",
+        "studyType": "fulltime",
+        "batch start year": 2018,
+        "batch end year": 2021,
+        "gpa": 7.5,
+      }
+    ],
+    "skills": [
+      {
+        "name": "html,css,javascript,react_js,node_js,MongoDB",
+        "level": "beginer",
+        "project": [
+          "E-commerce site"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "Tamil,Enlish,Telugu",
+      }
+    ],
+    "interests": [
+      {
+        "name": "front-end,",
+      }
+    ]
+  }
+  console.log(myResume);
+  
